@@ -67,7 +67,7 @@ const pathname = path.join(__dirname, "../public");
 
 app.use(express.static(pathname));
 
-// const srcp = path.join(__dirname, "../src/app.js");
+// const srcp = path.join(__dirname, "./app.js");
 // console.log(srcp);
 
 
