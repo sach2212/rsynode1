@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+ {{>navbar}}
+
+
+    {{!-- <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"> <img src="images/logo-removebg-preview.png" alt="" srcset=""></a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="#vehicles">vehicles</a>
+            <a href="services.html" target="_blank">services</a>
+            <a href="#featured">featured</a>
+            <a href="#reviews">reviews</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+        <div id="login-btn">
+            <button class="booknow">Enquire now</button>
+            <!-- <i class="far fa-user"></i> -->
+        </div>
+
+    </header> --}}
+    
+
+    
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>contact</span> us</h1>
+
+        <div class="row">
+
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d120570.20465977481!2d72.76830114489975!3d19.20311090250111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3be7b79aa48af03f%3A0x2774dc07ae67d029!2sSHOP%20NO%209%2C%20ABHINAV%20APARTMENT%20CHS%20LTD%2C%20CHHATRAPATI%2C%20Shivaji%20Rd%2C%20opp.%20Atul%20Tower%2C%20Tribhuvan%20Chawl%2C%20Hemu%20Colony%2C%20Bhagat%20Colony%2C%20Kandivali%20West%2C%20Mumbai%2C%20Maharashtra%20400067!3m2!1d19.203124199999998!2d72.83834159999999!5e0!3m2!1sen!2sin!4v1676971811665!5m2!1sen!2sin" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <form  name="submit-to-google-sheet" >
+                <h3>get in touch</h3>
+                
+                <input type="text"  name="name"   placeholder="your name" class="box">
+                <input type="email"  name="email"   placeholder="your email" class="box">
+                <input type="number"  name="number"   placeholder=" your number" class="box">
+                <textarea placeholder="your message" name="message"   class="box" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="booknow">
+                <span id="msg"></span>
+            </form>
+
+        </div>
+
+    </section>
+    <section class="newsletter">
+
+        <h3>subscribe for latest updates</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, suscipit.</p>
+
+        <form >
+            <input type="email" placeholder="enter your email">
+            <input type="submit" value="subscribe">
+        </form>
+
+    </section>
+
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyetEIfJSPP8xrntlJSWW-MK1uvP2G2kezhpyKQ36Gyo9KheZvyshRIVmtyn8oyQp2wlg/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response =>{
+    
+    msg.innerHTML =  'Message sent sucessfully'
+    setTimeout (function(){
+
+        msg.innerHTML=''
+
+
+    },3000)
+    form.reset()
+
+
+
+})
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+</body>
+</html>
+
+<!-- b500423b-8c12-46d7-920c-ad19891d7669 -->
