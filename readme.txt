@@ -36,3 +36,12 @@ do something with navbar
 --cache ,cookies
 --csp -content s
 
+
+
+-------------------------vercel.json-----------------------------
+
+
+version 
+builds = src and use(@vercel/node)
+framework
+routes
