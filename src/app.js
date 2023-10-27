@@ -63,9 +63,12 @@ app.set("view engine", "hbs");
 const partialsPath = path.join(__dirname, "../partials");
 // hbs.registerPartials(partialsPath); //to work with partials use this
 
-const pathname = path.join(__dirname, ".. /public");
+const pathname = path.join(__dirname, "../public");
 
 app.use(express.static(pathname));
+
+// const srcp = path.join(__dirname, "../src/app.js");
+// console.log(srcp);
 
 
 // __hbs__ routing
