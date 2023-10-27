@@ -15,12 +15,15 @@ console.log(nonce);
 // global.nonce = nonce
 
 const scriptSource = "https://unpkg.com/aos@2.3.1/dist/aos.js";
-const scriptHash = crypto.createHash("sha256").update(scriptSource)  .digest("base64");
+const scriptHash = crypto
+  .createHash("sha256")
+  .update(scriptSource)
+  .digest("base64");
 console.log(scriptHash);
 
 const swiperScriptSource =
   "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js";
-  
+
 const swiperScriptHash = crypto
   .createHash("sha256")
   .update(swiperScriptSource)
@@ -42,7 +45,7 @@ app.use(
         // "'nonce-6l8/8VqAF3zc5gnDA2DJ5g=='",
         // "https://cdn.jsdelivr.net/",
         // 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js',
-            `'nonce-${nonce}'`,
+        `'nonce-${nonce}'`,
       ],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: [],
@@ -58,10 +61,15 @@ app.set("view engine", "hbs");
 
 // __giving partials
 const partialsPath = path.join(__dirname, "../partials");
-hbs.registerPartials(partialsPath); //to work with partials use this
+// hbs.registerPartials(partialsPath); //to work with partials use this
 
 const pathname = path.join(__dirname, "../public");
+
 app.use(express.static(pathname));
+
+// const srcp = path.join(__dirname, "../src/app.js");
+// console.log(srcp);
+
 
 // __hbs__ routing
 app.get("/", (req, res) => {
