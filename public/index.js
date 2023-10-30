@@ -39,14 +39,6 @@ btn.addEventListener('click',  ()=>{
 
   })
 
-
-
-
-
-
-
-
-
 menu.onclick = () =>{
   menu.classList.toggle('fa-times');
   navbar.classList.toggle('active');
@@ -87,7 +79,6 @@ document.querySelector('.home').onmousemove = (e) =>{
   });
 
 };
-
 
 document.querySelector('.home').onmouseleave = (e) =>{
 
