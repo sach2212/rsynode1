@@ -33,19 +33,9 @@ btn.addEventListener('click',  ()=>{
     let src =  btn.getAttribute('data-src');
     document.querySelector('#video-slider').src = src;
 
-
-
 })
 
   })
-
-
-
-
-
-
-
-
 
 menu.onclick = () =>{
   menu.classList.toggle('fa-times');
@@ -184,11 +174,5 @@ var swiper = new Swiper(".review-slider", {
   },
 });
 
-
-function fifth(num){
-
-  console.log(num); 
-}
-fifth(1, 2, 3, 4, 5)//  ➞ "number"
 
 
