@@ -69,11 +69,12 @@ helmet.contentSecurityPolicy({
 app.set("view engine", "hbs");
 
 // __giving partials
-const partialsPath = path.join(__dirname, "../partials");
+const partialsPath = path.join(__dirname, "./partials");
 hbs.registerPartials(partialsPath); //to work with partials use this
 
-const pathname = path.join(__dirname, "../public");
+const pathname = path.join(__dirname, "./public");
 app.use(express.static(pathname));
+console.log(pathname);
 
 // const srcp = path.join(__dirname, "./app.js");
 // console.log(srcp);
