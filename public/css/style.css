@@ -68,7 +68,7 @@ section{
     padding: 5rem 0 ;
     position: relative;
     /* z-index: 10000; */
-    background-color: #eee;
+    /* background-color: #d35c5c; */
 }
 
 
@@ -85,14 +85,11 @@ section{
   /*end me ajata he*/
   text-align: center;
  
-z-index: 10000;
+/* background-color: #010103; */
+/* z-index: 100000; */
 flex-wrap: wrap;
 
 }
-
-
-
-
 
 .homess .box .content{
     color: #ffffff;
@@ -148,8 +145,10 @@ flex-wrap: wrap;
     background-position: center;
      text-align: center;
      background-image: 
-      url('../image/letter-bg.webp');
+      url('/image/letter-bg.webp');
      /* height: 80vh; */
+     
+     /* background-color: #130f40; */
    
 }
 
@@ -300,7 +299,7 @@ background-color:#013399;
     /* padding:0rem 9%; */
     z-index: 1000;
 
-    background: #fff;
+    background: #ffffff;
 
 }
 
@@ -817,14 +816,14 @@ background-color:#013399;
 
 .newsletter{
     padding:6rem 2rem;
-    /* background: url(../image/letter-bg.png) no-repeat; */
+
     background-size: cover;
     background-position: center;
      text-align: center;
      background-image: 
      linear-gradient(
      rgba(0, 0, 0, 0.7),
-     rgba(15, 17, 19, 0.8)), url('../images/bg.webp');
+     rgba(15, 17, 19, 0.8)), url('/images/bg.webp');
 
     display: flex;
     flex-direction: column;
@@ -1035,7 +1034,7 @@ background-color:#013399;
     background-image: 
     linear-gradient(
     rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.8)), url('../image/footbg3.webp');
+    rgba(0, 0, 0, 0.8)), url('/image/footbg3.webp');
     background-size: cover;
 
     background-repeat: no-repeat;

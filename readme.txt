@@ -45,3 +45,66 @@ version
 builds = src and use(@vercel/node)
 framework
 routes
+
+
+
+
+
+
+-----------tut--------------------
+https://nodeschool.io/
+https://github.com/getify/You-Dont-Know-JS
+
+
+
+
+
+console.log(nonce);
+// global.nonce = nonce
+
+const scriptSource = "https://unpkg.com/aos@2.3.1/dist/aos.js";
+const scriptHash = crypto.createHash("sha256").update(scriptSource).digest("base64");
+
+// console.log(scriptHash);
+
+const swiperScriptSource ="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js";
+
+const swiperScriptHash = crypto.createHash("sha256").update(swiperScriptSource).digest("base64");
+
+// console.log(scriptHash);
+console.log(swiperScriptHash);
+
+app.use(
+helmet.contentSecurityPolicy({
+
+    directives: {
+      defaultSrc: ["'self'"],
+
+      scriptSrcElem: [
+        "'self'",
+       
+        `'sha256-${scriptHash}'`,
+       
+        // "'unsafe-inline'",
+        
+        scriptSource,
+        
+          `'sha256-${swiperScriptHash}'`,
+        
+        swiperScriptSource,
+        
+           `'nonce-${nonce}'`,
+      ],
+      objectSrc: ["'none'"],
+      upgradeInsecureRequests: [],
+      blockAllMixedContent: [],
+    
+    },
+
+  })
+);
+
+
+
+const crypto =  require ('crypto')
+const nonce =  crypto.randomBytes(16).toString("base64")
