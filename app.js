@@ -38,6 +38,14 @@ console.log(pathname);
 // console.log(srcp);
 
 
+
+
+app.get ("/s",(req, res)=>{
+
+  res.send('server is running') 
+})
+
+
 // __hbs__ routing
 app.get("/", (req, res) => {
   res.render("index"); //require stack err
@@ -59,6 +67,11 @@ app.get("/Shop", (req, res) => {
 app.get("/cars", (req, res) => {
   res.render("cars");
 });
+
+
+
+
+
 
 // __static website__
 
