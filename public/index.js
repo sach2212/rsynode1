@@ -175,3 +175,17 @@ var swiper = new Swiper(".review-slider", {
   },
 });
 
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT|| 5000
+
+app.get("/",(req,res)=>{
+
+  res.send("server is running")
+
+})
+
+
+app.listen(PORT, (req, res) => {
+  console.log("connected successfully");
+});
