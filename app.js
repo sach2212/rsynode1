@@ -6,72 +6,61 @@ const hbs = require("hbs");
 const PORT = process.env.PORT|| 5000
 
 
-// __gives the security
-// const helmet = require("helmet");
-// app.use(helmet());
+// // __gives the security
+// // const helmet = require("helmet");
+// // app.use(helmet());
+// // // ___________
+
+// // const { contentSecurityPolicy } = require('helmet');
+
+// const crypto = require("crypto");
+// const nonce = crypto.randomBytes(16).toString("base64");
 // // ___________
 
-// const { contentSecurityPolicy } = require('helmet');
+// // const { partials } = require("handlebars");
+// app.set("view engine", "hbs");
 
-const crypto = require("crypto");
-const nonce = crypto.randomBytes(16).toString("base64");
+// // __giving partials
+// const partialsPath = path.join(__dirname, "./partials");
+// hbs.registerPartials(partialsPath); //to work with partials use this
 
+// const pathname = path.join(__dirname, "./public");
+// app.use(express.static(pathname));
+// console.log(pathname);
 
-
-
-
-
-// ___________
-
-// const { partials } = require("handlebars");
-app.set("view engine", "hbs");
-
-// __giving partials
-const partialsPath = path.join(__dirname, "./partials");
-hbs.registerPartials(partialsPath); //to work with partials use this
-
-const pathname = path.join(__dirname, "./public");
-app.use(express.static(pathname));
-console.log(pathname);
-
-// const srcp = path.join(__dirname, "./app.js");
-// console.log(srcp);
+// // const srcp = path.join(__dirname, "./app.js");
+// // console.log(srcp);
 
 
 
 
-  // app.get ("/s",(req, res)=>{
+//   // app.get ("/s",(req, res)=>{
 
-  //   res.send('server is running') 
-  // })
-
-
-// __hbs__ routing
-app.get("/", (req, res) => {
-  res.render("index"); //require stack err
-});
-
-app.get("/index.html", (req, res) => {
-  res.render("index"); //require stack err
-  // res.send("zsczsc")
-});
-
-app.get("/contact", (req, res) => {
-  res.render("contact");
-});
-
-app.get("/Shop", (req, res) => {
-  res.render("services");
-});
-
-app.get("/cars", (req, res) => {
-  res.render("cars");
-});
+//   //   res.send('server is running') 
+//   // })
 
 
+// // __hbs__ routing
+// app.get("/", (req, res) => {
+//   res.render("index"); //require stack err
+// });
 
+// app.get("/index.html", (req, res) => {
+//   res.render("index"); //require stack err
+//   // res.send("zsczsc")
+// });
 
+// app.get("/contact", (req, res) => {
+//   res.render("contact");
+// });
 
+// app.get("/Shop", (req, res) => {
+//   res.render("services");
+// });
+
+// app.get("/cars", (req, res) => {
+//   res.render("cars");
+// });
 
 // __static website__
 
@@ -85,6 +74,13 @@ app.get("/cars", (req, res) => {
 //   // res.render(index.html)//require stack err
 //   // res.send("zsczsc")
 // });
+
+app.get("/",(req,res)=>{
+
+  res.send("server is running")
+
+})
+
 
 app.listen(PORT, (req, res) => {
   console.log("connected successfully");
