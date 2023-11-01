@@ -40,10 +40,10 @@ console.log(pathname);
 
 
 
-app.get ("/s",(req, res)=>{
+  // app.get ("/s",(req, res)=>{
 
-  res.send('server is running') 
-})
+  //   res.send('server is running') 
+  // })
 
 
 // __hbs__ routing
